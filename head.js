@@ -33,12 +33,6 @@ export default class {
             success: (response) => {
             this.$itemsCount.text(response.itemsCount);
 
-        if (this.$wishListBtnArray.length === 0) {
-            this.$btn.toggleClass(this.activeClass);
-        } else {
-            this.$wishListBtnArray.toggleClass(this.activeClass);
-        }
-    }
     });
     }
 

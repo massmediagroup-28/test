@@ -17,6 +17,7 @@ export default class {
 
     btnClickHandler(e) {
         e.preventDefault();
+        e.preventDefault();
 
         if (this.$btn.hasClass(this.activeClass)) {
             this.request(this.$btn.data(this.rmAction));

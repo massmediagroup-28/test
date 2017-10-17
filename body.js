@@ -17,10 +17,6 @@ export default class extends AjaxForm {
     errorSubmit(response) {
         let $errorsBlock = $('.js-customer-form-errors');
 
-        if (response.status == 422) {
-            let $deliveryRadio = $('.js-purchase-delivery-radio');
-            let $paymentRadio = $('.js-purchase-payment-radio');
-
             $.each(response.responseJSON.errors, function (i, v) {
                 if (i == 'delivery') {
                     $deliveryRadio.siblings('label').find('span.box').addClass('radio-error');

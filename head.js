@@ -45,6 +45,16 @@ export default class {
             this.$itemsCount.text(response.itemsCount);
 
     });
+
+        request(action) {
+            $.ajax({
+                url: action,
+                dataType: "json",
+                type: "POST",
+                success: (response) => {
+                this.$itemsCount.text(response.itemsCount);
+
+        });
     }
 
     subscribe() {

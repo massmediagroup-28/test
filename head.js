@@ -25,6 +25,16 @@ export default class {
             this.request(this.$btn.data(this.addAction));
         }
     }
+    btnClickHandler(e) {
+        e.preventDefault();
+        e.preventDefault();
+
+        if (this.$btn.hasClass(this.activeClass)) {
+            this.request(this.$btn.data(this.rmAction));
+        } else {
+            this.request(this.$btn.data(this.addAction));
+        }
+    }
 
     request(action) {
         $.ajax({
